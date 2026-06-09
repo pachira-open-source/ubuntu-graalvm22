@@ -8,7 +8,7 @@ ARG GRAALJS_DOWNLOAD_URL=https://github.com/oracle/graaljs/releases/download/vm-
 
 RUN export DEBIAN_FRONTEND=noninteractive && \
     apt-get update --fix-missing && \
-    apt-get install -y --no-install-recommends curl iputils-ping ca-certificates vim-tiny tar unzip libc6 libstdc++6 libgcc-s1 && \
+    apt-get install -y --no-install-recommends curl iputils-ping ca-certificates vim-tiny tar unzip libc6 libstdc++6 libgcc-s1 libjemalloc2 && \
     apt-get install -y --no-install-recommends tzdata && \
     ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
     dpkg-reconfigure -f noninteractive tzdata && \
